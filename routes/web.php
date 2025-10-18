@@ -3,19 +3,19 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    return view('pages.home');
 });
 
 Route::get('/products', function () {
-    return view('products');
+    return view('pages.products');
 });
 
 Route::get('/cart', function () {
-    return view('cart');
+    return view('pages.cart');
 });
 
 Route::get('/checkout', function () {
-    return view('checkout');
+    return view('pages.checkout');
 });
 
 // Route::get('/user/{id}', function ($id) {

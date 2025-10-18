@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Product;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,6 +20,9 @@ class OrderFactory extends Factory
     {
         return [
             //
+            'user_id' => User::factory(),
+            'product_id' => Product::factory(),
+            'total' => $this->faker->numberBetween(1,1000000),
         ];
     }
 }
