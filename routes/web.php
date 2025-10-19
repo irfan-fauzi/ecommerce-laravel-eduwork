@@ -3,11 +3,11 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('pages.home');
+    return view('pages.home', ['title' => 'home']);
 });
 
 Route::get('/products', function () {
-    return view('pages.products');
+    return view('pages.products',['title' => 'product']);
 });
 
 Route::get('/cart', function () {
