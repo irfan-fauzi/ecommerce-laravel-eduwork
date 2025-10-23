@@ -1,10 +1,9 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('pages.home', ['title' => 'home']);
-});
+Route::get('/', [ProductController::class, 'recomend'])->name('home');
 
 Route::get('/products', function () {
     return view('pages.products',['title' => 'product']);
