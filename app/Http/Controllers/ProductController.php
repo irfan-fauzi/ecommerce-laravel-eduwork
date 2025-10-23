@@ -12,9 +12,9 @@ class ProductController extends Controller
      */
     public function recomend()
     {
-        $products = Product::take(10)->get();
+        $products = Product::take(4)->get();
 
-        return view('pages.home', ['title' => 'home','products' => $products]);
+        return view('pages.home', ['title' => 'home', 'products' => $products]);
     }
 
     public function index()
