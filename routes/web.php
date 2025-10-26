@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [ProductController::class, 'recomend'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/products', function () {
     return view('pages.products',['title' => 'product']);
@@ -17,11 +17,4 @@ Route::get('/checkout', function () {
     return view('pages.checkout');
 });
 
-// Route::get('/user/{id}', function ($id) {
-//     return "user id:" . $id;
-// });
 
-// akan muncul too many request jika kita melakukan request ke halaman about 5 kali dalam 1 menit
-// Route::middleware('throttle:5,1')->get('/about', function () {
-//     return view('about');
-// });

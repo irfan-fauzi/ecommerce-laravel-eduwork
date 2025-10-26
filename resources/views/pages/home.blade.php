@@ -4,7 +4,7 @@
     <main>
         <div
             class="h-[500px] w-full bg-[url('https://raw.githubusercontent.com/irfan-fauzi/ecommerce-laravel-eduwork/refs/heads/main/public/img/c2.png')] bg-no-repeat bg-cover flex items-center justify-start">
-            <div class="max-w-screen-xl w-full mx-auto">
+            <div class="max-w-screen-xl w-full mx-auto px-10">
                 <header>
                     <h1 class="text-5xl font-bold mb-3 text-gray-100 max-w-[700px] leading-tight">Discover Your Next
                         Favorite Products</h1>
@@ -18,7 +18,8 @@
                 </header>
             </div>
         </div>
-        <div class="max-w-screen-xl mx-auto mt-10 mb-10">
+        <div class="max-w-screen-xl mx-auto mt-10 mb-10 px-10">
+          
             <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 @foreach ($products as $product)
                     <li class="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden">

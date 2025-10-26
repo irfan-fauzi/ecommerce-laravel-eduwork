@@ -1,5 +1,5 @@
 <nav class="shadow-xl">
-    <div class="flex items-center justify-between max-w-screen-xl mx-auto h-[70px]">
+    <div class="flex items-center justify-between max-w-screen-xl mx-auto h-[70px] px-10">
         <div>
             <h1 class="text-2xl font-bold"><a href="/">MyShop</a></h1>
         </div>
