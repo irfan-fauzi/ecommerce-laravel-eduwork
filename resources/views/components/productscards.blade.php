@@ -19,7 +19,7 @@
                 </p>
 
                 <p class="text-sm text-gray-500 mb-3">
-                    <span class="font-medium text-gray-700">Kategori:</span>{{ $product->category }}
+                    <span class="font-medium text-gray-700">Kategori:</span>{{ $product->category->name }}
                 </p>
 
                 <a href="{{ route('product.detail', $product->id) }}"

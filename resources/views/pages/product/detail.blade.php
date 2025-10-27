@@ -30,7 +30,7 @@
 
                         <p class="text-sm text-gray-500 mb-2">
                             <span class="font-medium text-gray-700">Kategori:</span>
-                            {{ $product->category ?? 'Tidak ada' }}
+                            {{ $product->category->name ?? 'Tidak ada' }}
                         </p>
 
                         <p class="text-sm text-gray-500 mb-6">
