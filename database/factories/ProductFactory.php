@@ -23,6 +23,7 @@ class ProductFactory extends Factory
             'image' => 'https://images.tokopedia.net/img/cache/1600-square/aphluv/1997/1/1/0b893ab607884d469e0aa47ac7cd9cc7~.jpeg',
             'stock' => fake()->numberBetween(10, 200),
             'price'=> fake()->numberBetween(10000,10000000),
+            'category_id' => null,
         ];
     }
 }
