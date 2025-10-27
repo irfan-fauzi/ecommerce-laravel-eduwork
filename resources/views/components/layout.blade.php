@@ -6,7 +6,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>{{ $title }}</title>
   </head>
-  <body>
+  <body class="min-h-full">
     {{ $slot }}
   </body>
 

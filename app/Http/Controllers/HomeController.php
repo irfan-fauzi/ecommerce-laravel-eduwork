@@ -13,4 +13,13 @@ class HomeController extends Controller
 
         return view('pages.home', ['title' => 'home', 'products' => $products]);
     }
+    public function products() {
+        $products = Product::all();
+        return view('pages.product.index', ['title' => 'products', 'products' => $products]);
+    }
+
+    public function detailProduct($id) {
+      $product = Product::where('id', $id)->firstOrFail();
+      return view('pages.product.detail', ['title' => 'product detail', 'product' => $product]);
+    }
 }

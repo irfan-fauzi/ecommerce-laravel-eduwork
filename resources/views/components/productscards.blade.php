@@ -22,7 +22,7 @@
                     <span class="font-medium text-gray-700">Kategori:</span>{{ $product->category }}
                 </p>
 
-                <a href="/detail/{{ $product->id }}"
+                <a href="{{ route('product.detail', $product->id) }}"
                     class="inline-block w-full text-center bg-blue-600 text-white font-medium py-2 rounded-lg hover:bg-blue-700 transition-colors">
                     Detail
                 </a>
