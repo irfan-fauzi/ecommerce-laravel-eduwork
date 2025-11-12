@@ -25,7 +25,7 @@
                         </p>
 
                         <p class="text-gray-600 leading-relaxed mb-6">
-                            {{ $product->description }}
+                            Description: {{ $product->description }}
                         </p>
 
                         <p class="text-sm text-gray-500 mb-2">
@@ -36,6 +36,7 @@
                         <p class="text-sm text-gray-500 mb-6">
                             <span class="font-medium text-gray-700">Stok:</span> {{ $product->stock ?? 'N/A' }}
                         </p>
+                        
                     </div>
 
                     <div class="flex gap-4 mt-4">

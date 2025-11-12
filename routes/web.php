@@ -9,8 +9,9 @@ Route::get('/products', [HomeController::class, 'products'])->name('products');
 Route::get('/product/{id}', [HomeController::class, 'detailProduct'])->name('product.detail');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('pages.dashboard.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
