@@ -21,7 +21,7 @@ class ProductController extends Controller
     {
         //
         $products = Product::paginate(5);
-        return view('pages.dashboard.product', ['products' => $products]);
+        return view('pages.dashboard.products.index', ['products' => $products]);
 
     }
 
@@ -30,7 +30,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.dashboard.products.add');
     }
 
     /**

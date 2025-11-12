@@ -1,7 +1,3 @@
-<?php
-var_dump($products);
-?>
-
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -29,7 +25,7 @@ var_dump($products);
                                 <div class="flex items-center justify-between mb-4">
                                     <h3 class="text-lg font-semibold">Daftar Produk</h3>
                                     <div class="flex items-center gap-2">
-                                        <a href="#"
+                                        <a href="{{ route('dashboard-product.create') }}"
                                             class="py-2 px-3 rounded bg-emerald-500 text-white text-sm hover:bg-emerald-700">Tambah
                                             Produk</a>
                                     </div>

@@ -14,10 +14,11 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/dashboard-category', function () {
-    return view('pages.dashboard.category-product');
+    return view('pages.dashboard.category.index');
 })->middleware(['auth', 'verified'])->name('dashboard-category');
 
-Route::get('/dashboard-product', [ProductController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard-product');
+Route::resource('dashboard-product', ProductController::class)->middleware(['auth', 'verified']);
+
 
 
 Route::middleware('auth')->group(function () {
