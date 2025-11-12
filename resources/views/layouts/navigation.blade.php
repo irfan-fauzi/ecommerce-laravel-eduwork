@@ -16,10 +16,16 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                {{-- <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard-category')" :active="request()->routeIs('dashboard-category')">
                         {{ __('Category') }}
                     </x-nav-link>
+                </div> --}}
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('dashboard-category.index')" :active="request()->routeIs('dashboard-category.*')">
+                        {{ __('Category') }}
+                    </x-nav-link>
+
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard-product.index')" :active="request()->routeIs('dashboard-product.*')">

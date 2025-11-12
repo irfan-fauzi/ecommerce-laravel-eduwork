@@ -1,6 +1,6 @@
 <x-app-layout>
 
-    <section class="px-[5rem] bg-white py-1">
+    <section class="px-[5rem] bg-white py-1 pb-10">
         <form action="{{ route('dashboard-product.store') }}" method="POST" enctype="multipart/form-data"
             class="max-w-screen-lg">
             @csrf
@@ -44,7 +44,7 @@
 
 
             <!-- Deskripsi -->
-            <div class="mb-5 flex flex-col mt-5 gap-2">
+            <div class="mb-5 flex flex-col  gap-2">
                 <label for="deskripsi">Deskripsi:</label>
                 <textarea id="deskripsi" name="deskripsi" rows="3"
                     class="px-3 py-2 bg-white focus:outline-none focus:ring-0 focus:border-b focus:border-gray-300"

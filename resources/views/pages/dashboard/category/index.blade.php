@@ -1,20 +1,75 @@
 <x-app-layout>
-   <x-slot name="header">
+    <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('product category') }}
+            {{ __('Category') }}
         </h2>
     </x-slot>
-    {{-- <section class="bg-white">
-      <div class="max-w-screen-xl px-8 mx-auto">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum veniam explicabo aliquam iste dolor exercitationem dolorum deleniti recusandae ratione odio quae sunt vitae id et, quod assumenda saepe aperiam velit neque harum commodi delectus pariatur est repellat! Officiis animi cupiditate vero quo unde nostrum earum nisi ipsa ullam corrupti natus sunt velit tenetur non dicta ad quis, sapiente doloribus esse veritatis ratione nemo? A, porro aut odio dolorum suscipit qui facilis quos praesentium error cum nostrum maxime ducimus repellendus labore delectus fugit. Corrupti repellendus dolore esse ipsum amet quibusdam dolores. Illum tenetur soluta voluptatem qui quidem explicabo velit, porro ut laboriosam commodi beatae ad animi necessitatibus itaque reiciendis obcaecati dolorum perferendis alias nesciunt in aliquid harum! Quo tempora adipisci dolores eum quam officia repellendus odio repudiandae ratione? Voluptatum, voluptatibus expedita impedit aliquid earum sit corrupti officia nisi doloribus iusto quae quam nobis unde, numquam asperiores cum ut similique! Nisi non quae numquam necessitatibus explicabo temporibus, iste recusandae minus. Quam quidem molestias, cumque saepe ipsa minus tempore perferendis velit dicta similique eum, expedita quae laborum tenetur aut eaque veniam magnam dolore mollitia porro harum. Sint alias deserunt nemo repellendus sit libero vero possimus! Blanditiis, hic soluta enim quam nostrum, error obcaecati quia sunt eos est accusantium nobis sapiente minima omnis dolorem dolorum a repudiandae et neque debitis aperiam! Deserunt animi repellat ipsum praesentium rem, ipsa, itaque, sed quas dolores quod eligendi nulla. Libero animi magnam numquam saepe vel quae maiores in laudantium tempore ratione reprehenderit, repellendus deserunt at non dolorem dicta nam molestias. Ipsum fugit, non porro corporis accusantium voluptate itaque sunt quibusdam nam soluta, nobis quisquam quam enim aliquam culpa accusamus ducimus totam optio deserunt maiores tenetur, modi quae assumenda. Repudiandae, autem! Libero aliquam qui facilis soluta? Odit nulla architecto, illo eos nobis quae enim debitis iure voluptatem beatae provident minus voluptatibus facere optio excepturi? Voluptates aliquid similique molestias voluptatem deserunt doloribus nisi, fugit deleniti esse tempore praesentium rerum eos modi, dolore excepturi nulla debitis labore laboriosam voluptas ratione. Reiciendis delectus minima quisquam. Numquam harum aspernatur ipsa accusantium beatae perferendis provident incidunt sit ea. Aperiam dolorem fuga eum nisi excepturi nulla laboriosam debitis, animi explicabo incidunt sapiente architecto, cumque perferendis mollitia maiores minima quo soluta et voluptatem molestiae hic. Ipsa animi libero praesentium quisquam rerum a quia odit magnam sapiente sed deleniti impedit laudantium distinctio illum odio, necessitatibus veniam, alias placeat neque. Illo assumenda quas velit accusamus neque delectus impedit placeat ducimus cumque fugiat, esse pariatur soluta suscipit et maiores iusto necessitatibus explicabo. Dicta, molestiae itaque quas mollitia placeat soluta deleniti delectus at eius non voluptatem aliquid dolores corporis omnis obcaecati explicabo a ducimus eveniet! Magnam modi incidunt tempore doloribus omnis molestias voluptatibus dolores natus amet, tempora beatae minus vero delectus dignissimos ad similique culpa. Optio itaque libero sit molestias, neque velit inventore maiores tempore maxime odio voluptas molestiae dolor repellendus aliquam debitis rem magnam corrupti sed ab amet asperiores iure? Eaque explicabo commodi unde doloribus nostrum quidem, consequuntur eum ex cupiditate architecto mollitia corporis sit perspiciatis iure id accusantium.</p>
-      </div>
-    </section> --}}
+
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in! edit index") }}
-                </div>
+                <main class="p-6">
+                    <div class="max-w-7xl mx-auto">
+
+                        <!-- Tabs -->
+                        <div class="bg-white shadow rounded p-4">
+                            <div class="border-b mb-4">
+                                <nav class="flex -mb-px">
+                                    <button class="py-3 px-4 text-sm font-medium active-tab"
+                                        data-tab="kategori">Kategori</button>
+                                </nav>
+                            </div>
+
+                            <section id="tab-kategori" class="tab-content">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="text-lg font-semibold">Daftar Kategori</h3>
+                                    <div class="flex items-center gap-2">
+                                        <a href="{{ route('dashboard-category.create') }}"
+                                            class="py-2 px-3 rounded bg-emerald-500 text-white text-sm hover:bg-emerald-700">
+                                            Tambah Kategori
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- categories table -->
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-slate-200">
+                                        <thead class="bg-slate-50">
+                                            <tr>
+                                                <th class="px-4 py-2 text-left text-sm font-medium text-slate-600">#
+                                                </th>
+                                                <th class="px-4 py-2 text-left text-sm font-medium text-slate-600">Nama
+                                                    Kategori</th>
+                                                <th class="px-4 py-2 text-left text-sm font-medium text-slate-600">
+                                                    Deskripsi</th>
+                                                <th class="px-4 py-2 text-left text-sm font-medium text-slate-600">
+                                                    Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="bg-white divide-y divide-slate-100">
+                                            @foreach ($categories as $category)
+                                                <tr>
+                                                    <td class="px-4 py-3 text-sm">{{ $loop->iteration }}</td>
+                                                    <td class="px-4 py-3 text-sm">{{ $category->name }}</td>
+                                                    <td class="px-4 py-3 text-sm">{{ $category->description }}</td>
+                                                    <td class="px-4 py-3 text-sm">
+                                                        <div class="flex gap-2">
+                                                            <a href="#"
+                                                                class="px-2 py-1 text-xs rounded border bg-blue-600 text-white">Edit</a>
+                                                            <a href="#"
+                                                                class="px-2 py-1 text-xs rounded border bg-red-500 text-white">Hapus</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </main>
             </div>
         </div>
     </div>
