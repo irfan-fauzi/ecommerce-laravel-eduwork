@@ -12,6 +12,14 @@ Route::get('/dashboard', function () {
     return view('pages.dashboard.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/dashboard-category', function () {
+    return view('pages.dashboard.category-product');
+})->middleware(['auth', 'verified'])->name('dashboard-category');
+
+Route::get('/dashboard-product', function () {
+    return view('pages.dashboard.product');
+})->middleware(['auth', 'verified'])->name('dashboard-product');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
