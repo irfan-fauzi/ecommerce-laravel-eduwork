@@ -54,7 +54,7 @@
                                                     <td class="px-4 py-3 text-sm">{{ $category->description }}</td>
                                                     <td class="px-4 py-3 text-sm">
                                                         <div class="flex gap-2">
-                                                            <a href="#"
+                                                            <a href="{{ route('dashboard-category.edit', $category->id) }}"
                                                                 class="px-2 py-1 text-xs rounded border bg-blue-600 text-white">Edit</a>
                                                             <a href="#"
                                                                 class="px-2 py-1 text-xs rounded border bg-red-500 text-white">Hapus</a>

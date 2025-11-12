@@ -53,7 +53,8 @@ class CategoryController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $category = Category::findOrFail($id);
+        return view('pages.dashboard.category.edit', compact('category'));
     }
 
     /**
@@ -61,7 +62,13 @@ class CategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validated = $request->validate([
+          'name' => 'required|string|max:200',
+          'description' => 'nullable|string'
+        ]);
+        $category = Category::findOrFail($id);
+        $category->update($validated);
+        return redirect()->route('dashboard-category.index')->with('success', 'kategori berhasil di update');
     }
 
     /**
