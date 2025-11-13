@@ -1,5 +1,5 @@
 <x-app-layout>
-    <section class="max-w-screen-xl mx-auto px-10 mt-10 bg-white py-1 pb-10">
+    <section class="max-w-screen-xl mx-auto lg:px-10 px-5 mt-10 bg-white py-1 pb-10">
         <form action="{{ route('dashboard-category.update', $category->id) }}" method="POST" class="max-w-screen-lg">
             @csrf
             @method('PUT')
@@ -7,7 +7,7 @@
             <div class="mb-5 flex flex-col mt-5 gap-2">
                 <label for="name" class="font-medium">Nama Kategori:</label>
                 <input type="text" id="name" name="name"
-                    class="w-[400px] border rounded-md focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500 "
+                    class="lg:w-[400px] border rounded-md focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500 "
                     value="{{ old('name', $category->name) }}">
             </div>
 

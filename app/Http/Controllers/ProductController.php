@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -30,7 +31,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('pages.dashboard.products.add');
+        $categories = Category::all();
+        return view('pages.dashboard.products.add', compact('categories'));
     }
 
     /**
@@ -38,7 +40,8 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+
     }
 
     /**
