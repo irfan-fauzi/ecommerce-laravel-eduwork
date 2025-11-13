@@ -1,5 +1,5 @@
 <x-app-layout>
-    <section class="px-[5rem] bg-white py-1 pb-10">
+    <section class="max-w-screen-xl mx-auto px-10 mt-10 bg-white py-1 pb-10">
         <form action="{{ route('dashboard-category.store') }}" method="POST" class="max-w-screen-lg">
             @csrf
 
