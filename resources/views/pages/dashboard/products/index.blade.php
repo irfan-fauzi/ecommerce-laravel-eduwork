@@ -55,7 +55,7 @@
                                             @foreach ($products as $product)
                                                 <td class="px-4 py-3 text-sm">{{ $loop->iteration }}</td>
                                                 <td class="px-4 py-3 text-sm">{{ $product->name }}</td>
-                                                <td class="px-4 py-3 text-sm">{{ $product->category->name }}</td>
+                                                <td class="px-4 py-3 text-sm">{{ $product->category->name ?? '-' }}</td>
                                                 <td class="px-4 py-3 text-sm"> Rp
                                                     {{ number_format($product->price, 0, ',', '.') }}</td>
                                                 <td class="px-4 py-3 text-sm">{{ $product->stock }}</td>

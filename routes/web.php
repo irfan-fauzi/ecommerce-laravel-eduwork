@@ -16,14 +16,22 @@ Route::get('/dashboard', function () {
 
 
 
-Route::resource('dashboard-product', ProductController::class)->middleware(['auth', 'verified']);
-Route::resource('dashboard-category', CategoryController::class)->middleware(['auth', 'verified']);
+
+
 
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    //category
+    Route::get('/dashboard-category/{id}/delete', [CategoryController::class, 'delete'])
+        ->name('dashboard-category.delete');
+    Route::resource('dashboard-category', CategoryController::class);
+
+    //product
+    Route::resource('dashboard-product', ProductController::class);
 });
 
 require __DIR__.'/auth.php';
