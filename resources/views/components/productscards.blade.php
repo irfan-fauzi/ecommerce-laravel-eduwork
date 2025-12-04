@@ -4,7 +4,7 @@
     @foreach ($products as $product)
         <li class="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
             <div class="relative w-full h-56 bg-gray-100">
-                <img src="{{ $product->image }}" alt="{{ $product->image }}"
+                <img src="{{ asset('storage/'. $product->image) ?? '' }}" alt="{{ $product->name }}"
                     class="object-cover w-full h-full hover:scale-105 transition-transform duration-300">
             </div>
 

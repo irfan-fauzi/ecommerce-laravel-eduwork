@@ -17,6 +17,7 @@ class Product extends Model
         'image',
         'stock',
         'price',
+        'category_id'
     ];
 
     public function orders(): HasMany

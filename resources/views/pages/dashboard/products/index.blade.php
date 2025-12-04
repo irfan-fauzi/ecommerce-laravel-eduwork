@@ -1,3 +1,6 @@
+@php
+  use illuminate\Support\Str;
+@endphp
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -10,8 +13,6 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <main class="p-6">
                     <div class="max-w-7xl mx-auto">
-
-
                         <!-- Tabs -->
                         <div class="bg-white shadow rounded p-4">
                             <div class="border-b mb-4">
@@ -54,7 +55,7 @@
 
                                             @foreach ($products as $product)
                                                 <td class="px-4 py-3 text-sm">{{ $loop->iteration }}</td>
-                                                <td class="px-4 py-3 text-sm">{{ $product->name }}</td>
+                                                <td class="px-4 py-3 text-sm">{{ Str::limit($product->name, 40, '...') }}</td>
                                                 <td class="px-4 py-3 text-sm">{{ $product->category->name ?? '-' }}</td>
                                                 <td class="px-4 py-3 text-sm"> Rp
                                                     {{ number_format($product->price, 0, ',', '.') }}</td>
